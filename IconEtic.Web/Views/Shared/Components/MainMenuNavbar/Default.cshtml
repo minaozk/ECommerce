@@ -1,0 +1,46 @@
+﻿@model IList<Etic.Entities.LowerCategory>
+<nav class="main-menu navbar-expand-md navbar-light">
+    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+        <ul class="navigation clearfix">
+	        <li class="current dropdown">
+				@foreach (var item in Model.Where(x => x.Id == 1))
+				{
+					<a href="index.html">@item.Name</a>
+					
+
+				}
+				<li class="dropdown">
+					@foreach (var indirim in Model.Where(x => x.Id == 2))
+					{
+						<a href="index.html">@indirim.Name<span>Hot</span></a>
+						
+					}
+					
+					
+				</li>
+				<li class="dropdown">
+					@foreach (var aboutus in Model.Where(x => x.Id == 3))
+					{
+                 <a href="index.html">@aboutus.Name</a>
+					}
+
+				</li>  
+				<li class="dropdown">
+					@foreach (var contact in Model.Where(x => x.Id == 4))
+					{
+                         <a href="index.html">@contact.Name</a>
+					}
+			
+				</li> 
+
+		     
+				<ul>
+
+			       
+
+		        </ul>
+	        </li>
+          
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,33 @@
+﻿@model IList<Etic.Entities.Slider>
+<section class="collection-section">
+	<div class="auto-container">
+		<div class="row clearfix">
+			@foreach (var item in Model.Where(x => x.Sort == 1))
+			{
+				<div class="col-lg-6 col-md-6 col-sm-12 single-column">
+					<div class="single-item wow fadeInLeft animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+						<div class="inner-box" style="background-image: url(@item.ImageUrl);">
+							<h2>@item.Header1</h2>
+							<p> <a class="electro-slider-btn btn-hover" href="@item.ProductLink">@item.Paragraph1</a></p>
+						</div>
+					</div>
+				</div>
+				@foreach (var subitem in Model.Where(x => x.Sort == 2))
+				{
+					<div class="col-lg-6 col-md-6 col-sm-12 single-column">
+						<div class="single-item wow fadeInLeft animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+							<div class="inner-box" style="background-image: url(@subitem.ImageUrl);">
+								<h2>@subitem.Header1</h2>
+								<p> <a class="electro-slider-btn btn-hover" href="@subitem.ProductLink">@subitem.Paragraph1</a></p>
+							</div>
+						</div>
+					</div>
+				}
+			
+
+			}
+
+
+		</div>
+	</div>
+</section>

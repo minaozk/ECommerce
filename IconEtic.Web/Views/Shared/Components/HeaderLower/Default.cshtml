@@ -1,0 +1,73 @@
+﻿@model IList<Etic.Entities.Category>  
+<div class="header-lower">
+    <div class="auto-container">
+        <div class="outer-box clearfix">
+            <div class="category-box pull-left">
+                <p>Kategoriler</p>
+	            <ul class="category-content">
+                    @foreach (var item in Model.Where(x => x.ParentId == 0))
+                    {
+	                    <li class="dropdown-option">
+		                    <i class="flaticon-dress"></i>
+		                    <a href="index-2.html">@item.Name</a>
+		                    <ul>
+                                @foreach (var subitem in Model.Where(x => x.ParentId == item.Id))
+                                {
+	                                <li><a href="index-2.html">@subitem.Name</a></li>
+                                }
+ 
+		                    </ul>
+	                    </li>
+                    }
+		           
+                                
+			               
+		            @*  <li class="dropdown-option">
+                        <i class="flaticon-t-shirt"></i>
+                        <a href="index-2.html">Man Fashion</a>
+                        <ul>
+                            <li><a href="index-2.html">Categories 01</a></li>
+                            <li><a href="index-2.html">Categories 02</a></li>
+                            <li><a href="index-2.html">Categories 03</a></li>
+                            <li><a href="index-2.html">Categories 04</a></li>
+                        </ul>
+                    </li>*@
+		            @*    <li class="dropdown-option">
+                        <i class="flaticon-woman"></i>
+                        <a href="index-2.html">Kid’s Clothing</a>
+                        <ul>
+                            <li><a href="index-2.html">Categories 01</a></li>
+                            <li><a href="index-2.html">Categories 02</a></li>
+                            <li><a href="index-2.html">Categories 03</a></li>
+                            <li><a href="index-2.html">Categories 04</a></li>
+                        </ul>
+                    </li>
+                    <li><i class="flaticon-necklace-1"></i><a href="index-2.html">Jewelry & Watches</a></li>
+                    <li><i class="flaticon-backpack"></i><a href="index-2.html">Bags & Shoes</a></li>
+                    <li><i class="flaticon-rocking-horse"></i><a href="index-2.html">Toys & Kids</a></li>
+                    <li class="dropdown-option">
+                        <i class="flaticon-lightbulb-1"></i>
+                        <a href="index-2.html">Electronics</a>
+                        <ul>
+                            <li><a href="index-2.html">Categories 01</a></li>
+                            <li><a href="index-2.html">Categories 02</a></li>
+                            <li><a href="index-2.html">Categories 03</a></li>
+                            <li><a href="index-2.html">Categories 04</a></li>
+                        </ul>
+                    </li>
+                    <li><i class="flaticon-laptop"></i><a href="index-2.html">Computers</a></li>
+                    <li><i class="flaticon-plus-1"></i><a href="index-2.html">Others</a></li>*@
+	            </ul>
+            </div>
+            <div class="menu-area pull-left">
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler">
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                </div>
+                @await Component.InvokeAsync("MainMenuNavbar")
+            </div>
+        </div>
+    </div>
+</div>

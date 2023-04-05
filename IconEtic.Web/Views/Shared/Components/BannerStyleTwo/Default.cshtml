@@ -1,0 +1,19 @@
+﻿@model IList<Etic.Entities.Slider>
+<section class="banner-style-two">
+	<div class="auto-container">
+		<div class="banner-carousel-2 owl-carousel owl-theme owl-nav-none">
+			@foreach (var item in Model)
+			{
+            <div class="content-box" style="background-image: url(@item.ImageUrl);">
+				<div class="inner-box">
+					<h1>@item.Header1  </h1>
+					<p>@item.Paragraph1</p>
+					<a href=@item.ProductLink class="theme-btn-two">Satın Al<i class="flaticon-right-1"></i></a>
+				</div>
+			</div>
+			}
+			
+
+		</div>
+	</div>
+</section>

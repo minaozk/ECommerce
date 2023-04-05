@@ -1,0 +1,53 @@
+﻿@model Etic.Entities.User
+<div class="header-top">
+    <div class="auto-container">
+        <div class="top-inner clearfix">
+            <div class="top-left pull-left">
+	            <ul class="info clearfix">
+		            @if (Model != null)
+		            {
+			            <li><i class="flaticon-global"></i>Hoşgeldin @Model.FullName</li>
+			            <li><i class="flaticon-email"></i><a href="/exit">Çıkış</a></li>
+		            }
+		            else
+		            {
+			            <li><i class="flaticon-email"></i><a href="/login">Giriş</a></li>
+			            <li><i class="flaticon-email"></i><a href="/register">Kayıt Ol</a></li>
+		            }
+	            </ul>
+	            <ul class="social-links clearfix">
+                    <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
+                    <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
+                </ul>
+            </div>
+            <div class="top-right pull-right">
+                <div class="language">
+                    <div class="lang-btn">
+                        <span class="flag"><img src="assets/images/icons/icon-lang.png" alt="" title="English"></span>
+                        <span class="txt">English</span>
+                        <span class="arrow fa fa-angle-down"></span>
+                    </div>
+                    <div class="lang-dropdown">
+                        <ul>
+                            <li><a href="index.html">German</a></li>
+                            <li><a href="index.html">Italian</a></li>
+                            <li><a href="index.html">Chinese</a></li>
+                            <li><a href="index.html">Russian</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price-box">
+                    <span>USD</span>
+                    <ul class="price-list clearfix">
+                        <li><a href="index.html">USD</a></li>
+                        <li><a href="index.html">UK</a></li>
+                        <li><a href="index.html">URO</a></li>
+                        <li><a href="index.html">Spanish</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>Castro - HTML 5 Template Preview</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="assets/css/font-awesome-all.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <link href="assets/css/owl.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/nice-select.css" rel="stylesheet">
+    <link href="assets/css/color.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+
+    <div class="boxed_wrapper">
+        <!-- Preloader -->
+        <div class="loader-wrap">
+            <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
+            <div class="layer layer-one"><span class="overlay"></span></div>
+            <div class="layer layer-two"><span class="overlay"></span></div>
+            <div class="layer layer-three"><span class="overlay"></span></div>
+        </div>
+
+
+        <!-- main header -->
+        <header class="main-header style-two">
+        @await Component.InvokeAsync("HeaderTop")
+        @await Component.InvokeAsync("HeaderUpper")
+        @await Component.InvokeAsync("HeaderLower")
+
+        <!--sticky Header-->
+        @await Component.InvokeAsync("StickyHeader")
+        </header>
+        <!-- main-header end -->
+        <!-- Mobile Menu  -->
+    @await Component.InvokeAsync("MobileMenu")<!-- End Mobile Menu -->
+        <!-- banner-section -->
+    @await Component.InvokeAsync("BannerStyleTwo")
+    <!-- banner-section end -->
+        <!-- collection-section -->
+    @await Component.InvokeAsync("CollectionSection")
+    <!-- collection-section end -->
+        <!-- topcategory-section -->
+        <section class="topcategory-section centred">
+        </section>
+        <!-- topcategory-section end -->
+        <!-- newarrivals-section -->
+
+        <!-- newarrivals-section end -->
+        <!-- cta-style-two -->
+        <section class="cta-style-two" style="background-image: url(assets/images/background/cta-bg-2.jpg);">
+            <div class="auto-container">
+                <div class="inner-box">
+                    <div class="inner">
+                        <h2>End of Season Clearance Sale upto 50%</h2>
+                        <p>Welcome to the new range of shaving products from master barber. We have over three decades of experience.</p>
+                        <a href="index-2.html" class="theme-btn-three">Shop Now<i class="flaticon-right-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- cta-style-two end -->
+        <!-- shop-section -->
+    @await Component.InvokeAsync("ShopSection")
+    <!-- shop-section end -->
+        <!-- news-section -->
+        <section class="news-section">
+            <div class="auto-container">
+                <div class="inner-container">
+                    <div class="sec-title">
+                        <h2>Castro News</h2>
+                        <p>Excepteur sint occaecat cupidatat non proident sunt</p>
+                        <span class="separator" style="background-image: url(assets/images/icons/separator-1.png);"></span>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-1.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <span class="post-date">May 05, 2020</span>
+                                        <h3><a href="blog-details.html">Why is a ticket to lagos so expensive?</a></h3>
+                                        <ul class="post-info clearfix">
+                                            <li><a href="index.html">by admin</a></li>
+                                            <li><a href="index.html">03 Comments</a></li>
+                                        </ul>
+                                        <p>Tempor incididunt labore dolore magna aliqua. enim minim veniam quis nostrud exercitation laboris.</p>
+                                        <div class="link"><a href="blog-details.html">Read More<i class="flaticon-right-1"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-2.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <span class="post-date">May 04, 2020</span>
+                                        <h3><a href="blog-details.html">But i must explain to you how all this mistaken idea.</a></h3>
+                                        <ul class="post-info clearfix">
+                                            <li><a href="index.html">by admin</a></li>
+                                            <li><a href="index.html">07 Comments</a></li>
+                                        </ul>
+                                        <p>Tempor incididunt labore dolore magna aliqua. enim minim veniam quis nostrud exercitation laboris.</p>
+                                        <div class="link"><a href="blog-details.html">Read More<i class="flaticon-right-1"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-3.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <span class="post-date">May 03, 2020</span>
+                                        <h3><a href="blog-details.html">The Biebers Just Switched Up Their Couple Style</a></h3>
+                                        <ul class="post-info clearfix">
+                                            <li><a href="index.html">by admin</a></li>
+                                            <li><a href="index.html">05 Comments</a></li>
+                                        </ul>
+                                        <p>Tempor incididunt labore dolore magna aliqua. enim minim veniam quis nostrud exercitation laboris.</p>
+                                        <div class="link"><a href="blog-details.html">Read More<i class="flaticon-right-1"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- news-section end -->
+        <!-- service-style-two -->
+        <section class="service-style-two">
+            <div class="auto-container">
+                <div class="inner-container">
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="flaticon-truck"></i></div>
+                                    <h3><a href="index.html">Free Shipping</a></h3>
+                                    <p>Free shipping on oder over $100</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="flaticon-24-7"></i></div>
+                                    <h3><a href="index.html">Support 24/7</a></h3>
+                                    <p>Contact us 24 hours a day, 7 days a week</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="flaticon-undo"></i></div>
+                                    <h3><a href="index.html">30 Days Return</a></h3>
+                                    <p>Simply return it within 30 days for an exchange.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- service-style-two end -->
+        <!-- main-footer -->
+        <footer class="main-footer light">
+            <div class="footer-top">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        <div class="col-lg-6 col-md-12 col-sm-12 big-column">
+                            <div class="row clearfix">
+                                <div class="col-lg-4 col-md-4 col-sm-12 footer-column">
+                                    <div class="footer-widget logo-widget">
+                                        <figure class="footer-logo"><a href="index.html"><img src="assets/images/footer-logo-2.png" alt=""></a></figure>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 footer-column">
+                                    <div class="footer-widget links-widget">
+                                        <div class="widget-title">
+                                            <h3>Category</h3>
+                                        </div>
+                                        <div class="widget-content">
+                                            <ul class="links-list clearfix">
+                                                <li><a href="index.html">Men</a></li>
+                                                <li><a href="index.html">Women</a></li>
+                                                <li><a href="index.html">Kids</a></li>
+                                                <li><a href="index.html">Accessories</a></li>
+                                                <li><a href="index.html">Shoe</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 footer-column">
+                                    <div class="footer-widget links-widget">
+                                        <div class="widget-title">
+                                            <h3>Useful Link</h3>
+                                        </div>
+                                        <div class="widget-content">
+                                            <ul class="links-list clearfix">
+                                                <li><a href="index.html">News & Tips</a></li>
+                                                <li><a href="index.html">About Us</a></li>
+                                                <li><a href="index.html">Terms & Conditions</a></li>
+                                                <li><a href="index.html">Our Shop</a></li>
+                                                <li><a href="index.html">Contact Us</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 big-column">
+                            <div class="row clearfix">
+                                <div class="col-lg-6 col-md-6 col-sm-12 footer-column">
+                                    <div class="footer-widget contact-widget">
+                                        <div class="widget-title">
+                                            <h3>Contact</h3>
+                                        </div>
+                                        <ul class="info-list clearfix">
+                                            <li><i class="flaticon-maps-and-flags"></i>4708 Ruecker Wall, Kassandratown, HI</li>
+                                            <li><i class="flaticon-phone-ringing"></i><a href="tel:23055873407">+2(305) 587-3407</a></li>
+                                            <li><i class="flaticon-email"></i><a href="mailto:info@example.com">info@example.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 footer-column">
+                                    <div class="footer-widget newsletter-widget">
+                                        <div class="widget-title">
+                                            <h3>Newsletter</h3>
+                                        </div>
+                                        <div class="widget-content">
+                                            <p>4708 Ruecker Wall, Kassandratown, HI 97729</p>
+                                            <form action="contact.html" method="post" class="newsletter-form">
+                                                <div class="form-group">
+                                                    <input type="email" name="email" placeholder="Enter your email" required="">
+                                                    <button type="submit" class="theme-btn-three">Subscribe</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="auto-container clearfix">
+                    <ul class="cart-list pull-left clearfix">
+                        <li><a href="index.html"><img src="assets/images/resource/card-1.png" alt=""></a></li>
+                        <li><a href="index.html"><img src="assets/images/resource/card-2.png" alt=""></a></li>
+                        <li><a href="index.html"><img src="assets/images/resource/card-3.png" alt=""></a></li>
+                        <li><a href="index.html"><img src="assets/images/resource/card-4.png" alt=""></a></li>
+                    </ul>
+                    <div class="copyright pull-right">
+                        <ul class="footer-social clearfix">
+                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
+                            <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
+                        </ul>
+                        <p><a href="index.html">Castro</a> &copy; 2020 All Right Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- main-footer end -->
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <i class="fas fa-long-arrow-alt-up"></i>
+        </button>
+    </div>
+
+
+    <!-- jequery plugins -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/scrollbar.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/isotope.js"></script>
+
+    <!-- main-js -->
+    <script src="assets/js/script.js"></script>
+</body><!-- End of .page_wrapper -->
+</html>
