@@ -28,11 +28,17 @@ namespace IconEtic.Business.Services
             var result = _productImageDal.Get(x => x.ProductId == productId);
             return result;
         }
+
+        public IList<ProductImage> GetAll()
+        {
+            return _productImageDal.GetAll();
+        }
     }
 
     public interface IProductImageService
     {
         IList<ProductImage> GetAllByProductId(int productId);
         ProductImage GetById(int productId);
+        IList<ProductImage> GetAll();
     }
 }

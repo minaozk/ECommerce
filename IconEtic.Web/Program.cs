@@ -23,6 +23,10 @@ namespace IconEtic.Web
             builder.Services.AddScoped<IProductDal, ProductDal>();
             builder.Services.AddScoped<IProductCategoryDal, ProductCategoryDal>();
             builder.Services.AddScoped<IProductImageDal, ProductImageDal>();
+            builder.Services.AddScoped<IBasketDal, BasketDal>();
+            builder.Services.AddScoped<IBasketProductDal, BasketProductDal>();
+         
+
 
             builder.Services.AddScoped<ILoginService, LoginService>();
             builder.Services.AddScoped<IUserService, UserService>();
@@ -32,6 +36,11 @@ namespace IconEtic.Web
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
             builder.Services.AddScoped<IProductImageService, ProductImageService>();
+            builder.Services.AddScoped<IBasketService, BasketService>();
+            builder.Services.AddScoped<IBasketProductService, BasketProductService>();
+
+         
+
 
             builder.Services.AddScoped<ICookieHelper, CookieHelper>();
 
@@ -41,6 +50,9 @@ namespace IconEtic.Web
             builder.Services.AddScoped<ILowerMenuComponentHandler, LowerMenuComponentHandler>();
             builder.Services.AddScoped<IBannerStyleTwoComponentHandler, BannerStyleTwoComponentHandler>();
             builder.Services.AddScoped<ICollectionSectionComponentHandler, CollectionSectionComponentHandler>();
+            builder.Services.AddScoped<IShopSectionComponentHandler, ShopSectionComponentHandler>();
+            builder.Services.AddScoped<IProductControllerHandler, ProductControllerHandler>();
+            builder.Services.AddScoped<IApiControllerHandler, ApiControllerHandler>();
 
             var app = builder.Build();
 
@@ -67,6 +79,16 @@ namespace IconEtic.Web
                 name: "Exit",
                 pattern: "/exit/",
                 defaults: new { controller = "Authentication", action = "Exit" }); ;
+
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.MapControllerRoute(
+                name: "ProductDetail",
+                pattern: "/urun/{name}",
+                defaults: new { controller = "Product", action = "Index" }); ;
+
 
             app.MapControllerRoute(
                 name: "default",

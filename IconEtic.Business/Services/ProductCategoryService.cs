@@ -22,10 +22,16 @@ namespace IconEtic.Business.Services
         {
             return _productCategoryDal.GetAll(x => x.CategoryId == categoryId);
         }
+
+        public IList<ProductCategory> GetAll()
+        {
+            return _productCategoryDal.GetAll();                                                   
+        }
     }
 
     public interface IProductCategoryService
     {
         IList<ProductCategory> GetProductsWithCategory(int categoryId);
+        IList<ProductCategory> GetAll();
     }
 }

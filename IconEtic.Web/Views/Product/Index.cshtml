@@ -1,0 +1,307 @@
+﻿@using Microsoft.EntityFrameworkCore.Infrastructure
+@model IconEtic.Business.Models.ProductControllerHandlerModel
+@{
+	Layout = "_ProductLayout";
+}
+<section class="product-details product-details-4">
+	<div class="auto-container">
+		<div class="product-details-content">
+			<div class="row clearfix">
+				<div class="col-lg-6 col-md-12 col-sm-12 image-column">
+					<div class="bxslider">
+						<div class="slider-content">
+							@{
+								var firstImage = @Model.Images.OrderBy(x => x.Sort).FirstOrDefault();
+							}
+							<div class="product-image">
+								<figure class="image">
+									<img src="/@firstImage.ImageUrl" alt="">
+									<a href="/@firstImage.ImageUrl" class="lightbox-image"><i class="flaticon-search-2"></i></a>
+								</figure>
+							</div>
+
+							<div class="slider-pager centred">
+								<ul class="thumb-box">
+									@for (int i = 0; i < Model.Images.OrderBy(x => x.Sort).ToList().Count; i++)
+									{
+										<li>
+
+											<a class="active" data-slide-index="@i" href="#"><figure><img src="/@Model.Images[i].ImageUrl" alt=""></figure></a>
+										</li>
+									}
+						
+
+
+
+								</ul>
+							</div>
+						</div>
+						<div class="slider-content">
+							@{
+								var secondImage = @Model.Images.Where(x => x.Sort == 2).FirstOrDefault();
+							}
+							<div class="product-image">
+								<figure class="image">
+									<img src="/@secondImage.ImageUrl" alt="">
+									<a href="/@secondImage.ImageUrl" class="lightbox-image"><i class="flaticon-search-2"></i></a>
+								</figure>
+							</div>
+							<div class="slider-pager centred">
+								<ul class="thumb-box">
+									@for (int i = 0; i < Model.Images.OrderBy(x => x.Sort).ToList().Count; i++)
+									{
+										<li>
+
+											<a class="active" data-slide-index="@i" href="#"><figure><img src="/@Model.Images[i].ImageUrl" alt=""></figure></a>
+										</li>
+									}
+
+
+
+								
+								</ul>
+							</div>
+						</div>
+						<div class="slider-content">
+							@{
+								var thirdImage = @Model.Images.Where(x => x.Sort == 3).FirstOrDefault();
+							}
+							<div class="product-image">
+								<figure class="image">
+									<img src="/@thirdImage.ImageUrl" alt="">
+									<a href="/@thirdImage.ImageUrl" class="lightbox-image"><i class="flaticon-search-2"></i></a>
+								</figure>
+							</div>
+							<div class="slider-pager centred">
+								<ul class="thumb-box">
+									@for (int i = 0; i < Model.Images.OrderBy(x => x.Sort).ToList().Count; i++)
+									{
+										<li>
+
+											<a class="active" data-slide-index="@i" href="#"><figure><img src="/@Model.Images[i].ImageUrl" alt=""></figure></a>
+										</li>
+									}
+									
+									
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12 content-column">
+					<div class="product-info">
+						<h3>@Model.Product.Name</h3>
+						<div class="customer-review clearfix">
+							<ul class="rating-box clearfix">
+								<li><i class="flaticon-star"></i></li>
+								<li><i class="flaticon-star"></i></li>
+								<li><i class="flaticon-star"></i></li>
+								<li><i class="flaticon-star"></i></li>
+								<li><i class="flaticon-star"></i></li>
+							</ul>
+							<div class="reviews"><a href="product-single.html">(5 Reviews)</a></div>
+						</div>
+						<span class="item-price">@Model.Product.Price.ToString("C")</span>
+						<div class="text">
+							<p>@Model.Product.ProductDescription</p>
+						</div>
+						<div class="othre-options clearfix">
+							<div class="item-box">
+								
+								<div class="single-item clearfix">
+									<div class="item-quantity">
+										<input class="quantity-spinner" type="text" value="1" id="quantity" name="quantity">
+									</div>
+									<h5>Woven Crop Cami<span>$50.30</span></h5>
+								</div>
+							</div>
+						
+
+							<a class="btn-box"><button type="button"  class="theme-btn-two" href = "#" onclick="AddtoBasket(@Model.Product.Id)" >Sepete Ekle</button></a>
+							<ul class="info clearfix">
+								<li><a href="product-details.html" onclick=""><i class="flaticon-heart"></i></a></li>
+								
+							</ul>
+						</div>
+						<div class="other-links">
+							<ul class="clearfix">
+								<li>SKU: 05</li>
+								<li>Category: <a href="product-details.html">Accessories</a></li>
+								<li>Tags: <a href="product-details.html">glasses</a>,<a href="product-details.html">t-shirts</a>,<a href="product-details.html">watches</a></li>
+							</ul>
+						</div>
+						<ul class="share-option clearfix">
+							<li><h5>Follow Us:</h5></li>
+							<li><a href="shop-details.html"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="shop-details.html"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="shop-details.html"><i class="fab fa-vimeo-v"></i></a></li>
+							<li><a href="shop-details.html"><i class="fab fa-google-plus-g"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-discription">
+			<div class="tabs-box">
+				<div class="tab-btn-box">
+					<ul class="tab-btns tab-buttons clearfix">
+						<li class="tab-btn" data-tab="#tab-1">Description</li>
+						<li class="tab-btn active-btn" data-tab="#tab-2">Reviews(1)</li>
+					</ul>
+				</div>
+				<div class="tabs-content">
+					<div class="tab" id="tab-1">
+						<div class="text">
+							<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla mco laboris nisi ut aliquip ex ea commodo consequat. duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesc iunt. neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+						</div>
+					</div>
+					<div class="tab active-tab" id="tab-2">
+						<div class="review-box">
+							<h5>1 Review for Multi-Way Ultra Crop Top</h5>
+							<div class="review-inner">
+								<figure class="image-box"><img src="/assets/images/resource/review-1.png" alt=""></figure>
+								<div class="inner">
+									<ul class="rating clearfix">
+										<li><i class="flaticon-star"></i></li>
+										<li><i class="flaticon-star"></i></li>
+										<li><i class="flaticon-star"></i></li>
+										<li><i class="flaticon-star"></i></li>
+										<li><i class="flaticon-star-1"></i></li>
+									</ul>
+									<h6>Eileen Alene <span>- May 1, 2020</span></h6>
+									<p>Excepteur sint occaecat cupidatat non proident sunt in culpa  qui officia deserunt mollit anim  est laborum. Sed perspiciatis unde omnis natus error sit voluptatem accusa dolore mque laudant totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi arch tecto beatae vitae dicta.</p>
+								</div>
+							</div>
+							<div class="replay-inner">
+								<h5>Be First to Review For “Multi-Way Ultra Crop Top”</h5>
+								<div class="rating-box clearfix">
+									<h6>Your Rating</h6>
+									<ul class="rating clearfix">
+										<li><i class="flaticon-star-1"></i></li>
+										<li><i class="flaticon-star-1"></i></li>
+										<li><i class="flaticon-star-1"></i></li>
+										<li><i class="flaticon-star-1"></i></li>
+										<li><i class="flaticon-star-1"></i></li>
+									</ul>
+								</div>
+								<form action="contact.html" method="post" class="review-form">
+									<div class="row clearfix">
+										<div class="col-lg-12 col-md-12 col-sm-12 form-group">
+											<label>Your Review</label>
+											<textarea name="message"></textarea>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+											<label>Your Name</label>
+											<input type="text" name="name" required="">
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-12 form-group">
+											<label>Your Emai</label>
+											<input type="email" name="email" required="">
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 form-group">
+											<div class="custom-controls-stacked">
+												<label class="custom-control material-checkbox">
+													<input type="checkbox" class="material-control-input">
+													<span class="material-control-indicator"></span>
+													<span class="description">Save my name, email, and website in this browser for the next time I comment</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+											<button type="submit" class="theme-btn-two">Submit Your Review<i class="flaticon-right-1"></i></button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="related-product">
+			<div class="sec-title style-two">
+				<h2>Related Products</h2>
+				<p>There are some product that we featured for choose your best</p>
+				<span class="separator" style="background-image: url(assets/images/icons/separator-2.png);"></span>
+			</div>
+			<div class="row clearfix">
+				<div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+					<div class="shop-block-one">
+						<div class="inner-box">
+							<figure class="image-box">
+								<img src="/assets/images/resource/shop/shop-1.jpg" alt="">
+								<ul class="info-list clearfix">
+									<li><a href="index.html"><i class="flaticon-heart"></i></a></li>
+									<li><a href="product-details.html">Add to cart</a></li>
+									<li><a href="/assets/images/resource/shop/shop-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-search"></i></a></li>
+								</ul>
+							</figure>
+							<div class="lower-content">
+								<a href="product-details.html">Cold Crewneck Sweater</a>
+								<span class="price">$70.30</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+					<div class="shop-block-one">
+						<div class="inner-box">
+							<figure class="image-box">
+								<img src="/assets/images/resource/shop/shop-2.jpg" alt="">
+								<span class="category green-bg">New</span>
+								<ul class="info-list clearfix">
+									<li><a href="index.html"><i class="flaticon-heart"></i></a></li>
+									<li><a href="product-details.html">Add to cart</a></li>
+									<li><a href="/assets/images/resource/shop/shop-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-search"></i></a></li>
+								</ul>
+							</figure>
+							<div class="lower-content">
+								<a href="product-details.html">Multi-Way Ultra Crop Top</a>
+								<span class="price">$50.00</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+					<div class="shop-block-one">
+						<div class="inner-box">
+							<figure class="image-box">
+								<img src="/assets/images/resource/shop/shop-3.jpg" alt="">
+								<ul class="info-list clearfix">
+									<li><a href="index.html"><i class="flaticon-heart"></i></a></li>
+									<li><a href="product-details.html">Add to cart</a></li>
+									<li><a href="/assets/images/resource/shop/shop-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-search"></i></a></li>
+								</ul>
+							</figure>
+							<div class="lower-content">
+								<a href="product-details.html">Side-Tie Tank</a>
+								<span class="price">$40.00</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+					<div class="shop-block-one">
+						<div class="inner-box">
+							<figure class="image-box">
+								<img src="/assets/images/resource/shop/shop-4.jpg" alt="">
+								<ul class="info-list clearfix">
+									<li><a href="index.html"><i class="flaticon-heart"></i></a></li>
+									<li><a href="product-details.html">Add to cart</a></li>
+									<li><a href="/assets/images/resource/shop/shop-4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-search"></i></a></li>
+								</ul>
+							</figure>
+							<div class="lower-content">
+								<a href="product-details.html">Cold Crewneck Sweater</a>
+								<span class="price">$60.30</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+

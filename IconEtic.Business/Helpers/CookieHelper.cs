@@ -50,6 +50,7 @@ namespace IconEtic.Business.Helpers
     {
         User,
         Admin,
-        Tracer
+        Tracer,
+        Basket
     }
 }
